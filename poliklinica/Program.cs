@@ -1,4 +1,4 @@
-﻿/*
+/*
 Вы заходите в поликлинику и видите огромную очередь из пациентов, вам нужно рассчитать время ожидания в очереди.  
 
 Формально: 
@@ -24,11 +24,10 @@ namespace CSLight
             Console.WriteLine("Введите кол-во людей в очереди:");
             int people = Convert.ToInt32(Console.ReadLine());                   
             int minutesToReceivePatients = 10;
-            int time = people * minutesToReceivePatients;
+            int timeOfWaiting = people * minutesToReceivePatients;
             int minutesInHour = 60;
-            int secondsInMinutes = 60;
-            int hoursOfWaiting = time / minutesInHour;
-            int minutesOfWaiting = time % secondsInMinutes;
+            int hoursOfWaiting = timeOfWaiting / minutesInHour;
+            int minutesOfWaiting = timeOfWaiting % minutesInHour;
             Console.WriteLine("Вы должны стоять в очереди:" + hoursOfWaiting + " час(а/ов) и " + minutesOfWaiting + " минут");
         }
     }
