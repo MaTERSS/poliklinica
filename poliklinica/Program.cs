@@ -13,10 +13,7 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CSLight
 {
@@ -25,13 +22,14 @@ namespace CSLight
         static void Main(string[] args)
         {
             Console.WriteLine("Введите кол-во людей в очереди:");
-            int people;
-            people = Convert.ToInt32(Console.ReadLine());          
-            int reception = 10;
-            int time = people * reception;
-            int hours = time / 60;
-            int minutes = time % 60;
-            Console.WriteLine("Вы должны стоять в очереди:" + hours + "часа и " + minutes + "минут");
+            int people = Convert.ToInt32(Console.ReadLine());                   
+            int minutesToReceivePatients = 10;
+            int time = people * minutesToReceivePatients;
+            int minutesInHour = 60;
+            int secondsInMinutes = 60;
+            int hoursOfWaiting = time / minutesInHour;
+            int minutesOfWaiting = time % secondsInMinutes;
+            Console.WriteLine("Вы должны стоять в очереди:" + hoursOfWaiting + " час(а/ов) и " + minutesOfWaiting + " минут");
         }
     }
 }
